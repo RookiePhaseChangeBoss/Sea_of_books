@@ -1,0 +1,36 @@
+{
+  "name": "sea-of-books",
+  "version": "0.1.0",
+  "private": true,
+  "description": "离线阅读 EPUB、MOBI 与 AZW3",
+  "main": "./out/main/index.js",
+  "author": "书洋",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "tsx scripts/self-test.ts",
+    "samples": "tsx scripts/make-samples.ts",
+    "icons": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-icon.ps1 && node scripts/make-icon.mjs",
+    "dist": "electron-vite build && electron-builder --win",
+    "dist:setup": "electron-vite build && electron-builder --win nsis",
+    "dist:portable": "electron-vite build && electron-builder --win portable"
+  },
+  "devDependencies": {
+    "@fontsource/literata": "^5.3.0",
+    "@fontsource/outfit": "^5.3.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "electron": "^45.2.2",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "fflate": "^0.8.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
